@@ -437,7 +437,6 @@ public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
                 		throw new IOException();
                 	}
                 }
-                }
             });
 
 
