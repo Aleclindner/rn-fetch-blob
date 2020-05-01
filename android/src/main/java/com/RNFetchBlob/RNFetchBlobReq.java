@@ -430,7 +430,13 @@ public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
                     } catch(Exception ex) {
 
                     }
-                    return chain.proceed(chain.request());
+                    try {
+                    	return chain.proceed(chain.request());
+                	}
+                	catch(Exception ex) {
+                		throw new IOException();
+                	}
+                }
                 }
             });
 
